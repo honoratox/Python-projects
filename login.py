@@ -1,4 +1,4 @@
-import customtkinter
+import customtkinter #biblioteca que permite a criação de interfaces gráficas
 from tkinter import messagebox #importa a biblioteca de pop-ups
 import string #permite usar bibliotecas como is digit e isnumber e etc
 

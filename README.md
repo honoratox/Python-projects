@@ -1,5 +1,5 @@
 # Python-projects
-## Portugês
+## Português
 Repositório destinado pra diversos projetos e pesquisas pessoais dentro da linguagem Python, sendo esses desde projetos simples até os mais complexos utilizando programação orientada a objetos(POO)  
 
 ## English

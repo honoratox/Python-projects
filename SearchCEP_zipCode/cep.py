@@ -4,8 +4,34 @@ import requests
 # Cria a janela principal usando customtkinter
 window = customtkinter.CTk()
 
-estados ={
-    "MG": "Minas Gerais"
+estados = {  #dicionário pra armazenar os estados
+    "AC": "Acre",
+    "AL": "Alagoas",
+    "AP": "Amapá",
+    "AM": "Amazonas",
+    "BA": "Bahia",
+    "CE": "Ceará",
+    "DF": "Distrito Federal",
+    "ES": "Espírito Santo",
+    "GO": "Goiás",
+    "MA": "Maranhão",
+    "MT": "Mato Grosso",
+    "MS": "Mato Grosso do Sul",
+    "MG": "Minas Gerais",
+    "PA": "Pará",
+    "PB": "Paraíba",
+    "PR": "Paraná",
+    "PE": "Pernambuco",
+    "PI": "Piauí",
+    "RJ": "Rio de Janeiro",
+    "RN": "Rio Grande do Norte",
+    "RS": "Rio Grande do Sul",
+    "RO": "Rondônia",
+    "RR": "Roraima",
+    "SC": "Santa Catarina",
+    "SP": "São Paulo",
+    "SE": "Sergipe",
+    "TO": "Tocantins"
 }
 
 class Window:
@@ -40,8 +66,11 @@ class Window:
         if requisicao.status_code == 200: # Verifica se a requisição foi bem-sucedida
             dados = requisicao.json()
 
+            estadosSigla = dados.get('state')
+            estadosNomes = estados.get(estadosSigla) #busca um valor no dicionário, no caso se encontrar a sigla, dentro do dicionario, retorna o nome
+
             # Extrai os dados desejados do JSON
-            endereco = f"Endereço: {dados.get('address')} \nBairro: {dados.get('district')} \nCidade: {dados.get('city')} \nEstado: {dados.get('state')}" #'f' porque é uma variável
+            endereco = f"Endereço: {dados.get('address')} \nBairro: {dados.get('district')} \nCidade: {dados.get('city')} \nEstado: {estadosNomes}, {estadosSigla}" #'f' porque é uma variável
         else:
             endereco = "CEP não encontrado ou inválido."
 

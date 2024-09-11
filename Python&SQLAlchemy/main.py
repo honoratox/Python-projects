@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, String, Integer, Boolean, ForeignKey #sqlalchemy permite que você use a sintaxe python pra fazer as operações no banco de dados
+'''from sqlalchemy import create_engine, Column, String, Integer, Boolean, ForeignKey #sqlalchemy permite que você use a sintaxe python pra fazer as operações no banco de dados
 from sqlalchemy.orm import sessionmaker, declarative_base #o session é pra criar a sessão e o declarative base é pra criar as tabelas do banco de dados
 
 db = create_engine("sqlite:///C:/Users/phhonorato/Downloads/webPython/Python&SQLAlchemy/banco.db") #conexão com o banco de dados local
@@ -73,4 +73,4 @@ Base.metadata.create_all(bind=db) #cria todas as tabelas criadas no 'Base' no ba
 #item_delete = session.query(Usuario).filter_by(id=2).first() #passa os parametros para o item a ser deletado
 #print("Usuário deletado com sucesso!")
 #session.delete(item_delete)
-#session.commit()
+#session.commit()'''
